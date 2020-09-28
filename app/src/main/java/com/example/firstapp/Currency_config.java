@@ -34,7 +34,7 @@ public class Currency_config extends AppCompatActivity {
         String dollar_rate_input=dollar_rate.getText().toString();
         String euro_rate_input=euro_rate.getText().toString();
         String won_rate_input=euro_rate.getText().toString();
-
+        //在获取的intent对象中修改数值
         Intent config=getIntent();
         config.putExtra("dollar_rate_key",Float.valueOf(dollar_rate_input));
         config.putExtra("euro_rate_key",Float.valueOf(euro_rate_input));

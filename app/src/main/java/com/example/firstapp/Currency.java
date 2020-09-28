@@ -32,6 +32,7 @@ public class Currency extends AppCompatActivity {
     }
 
     @Override
+    //接收可返回页面传来的data
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode==1&&resultCode==2){
 //            Intent intent = getIntent();
@@ -78,18 +79,26 @@ public class Currency extends AppCompatActivity {
     //菜单内容
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.first_menu,menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
     }
-
+    //示例，点击菜单第一个下拉框，进入汇率配置页面
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.item1){
-
+            Intent config=new Intent(this,Currency_config.class);//当前session
+            config.putExtra("dollar_rate_key",dollarRate);
+            config.putExtra("euro_rate_key",euroRate);
+            config.putExtra("won_rate_key",wonRate);
+            //请求可返回窗口
+            startActivityForResult(config,1);//打开新窗口
+            //Log.i(TAG,"open:dollarRate=");
         }else if(item.getItemId()==R.id.item2){
 
         }
-        return super.onOptionsItemSelected(item);
+        return true;
+        //return super.onOptionsItemSelected(item);
     }
     //protected void onA
 }
