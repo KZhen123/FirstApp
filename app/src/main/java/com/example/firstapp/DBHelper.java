@@ -29,22 +29,4 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-/*private static final int VERSION = 1;
-    private static final String DB_NAME = "myrate.db";
-    public static final String TB_NAME = "tb_rates";
-    private Context mcontext;
-    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                    int version) {
-        super(context, name, factory, version);
-        mcontext=context;
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+TB_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT,CURNAME TEXT,CURRATE TEXT)");
-        //db.execSQL("CREATE TABLE"+TB_NAME+"(id integer primary key autoincrement,curname text,currate text)");
-    }
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    }*/
 }

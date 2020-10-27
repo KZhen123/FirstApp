@@ -32,8 +32,6 @@ public class sqlTest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                     SQLiteDatabase database = dbHelper.getWritableDatabase();
-                    //database.execSQL("drop table " + mTable);
-                //dbhelper.getWritableDatabase();
             }
         });
         //插入数据

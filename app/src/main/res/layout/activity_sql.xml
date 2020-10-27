@@ -14,7 +14,8 @@
         android:layout_marginTop="548dp"
         android:text="createDB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/insertdb"
